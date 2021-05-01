@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>counterClick</title>
+        <style>
+            #red{
+                height: 100px;
+                width: 100px;
+                background-color: red;
+                position: absolute;
+                top: 30%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            #count {
+                position: absolute;
+                top: 45%;
+                left: 44%;
+                text-transform: uppercase;
+                font-weight: 900;
+                line-height: 10px;
+                letter-spacing: .3px;
+                word-spacing: .5px;
+                font-size: 1.2rem;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div id="red"></div>
+        <span id="count">Clicked </span>
+
+
+        <!--script-->
+        <script>
+            var counterClick = document.getElementById('count');
+            var red = document.getElementById('red');
+            red.onclick = inc;
+            var count = 0;
+            counterClick.innerHTML = "Clicked " + count + " times.";
+            function inc() {
+                count++;
+                counterClick.innerHTML = "Clicked " + count + " times.";
+            }
+        </script>
+    </body>
+</html>
